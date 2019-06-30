@@ -11,6 +11,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
+    binding.pry
+    @user = User.new(username: params)
     erb :account
   end
 
