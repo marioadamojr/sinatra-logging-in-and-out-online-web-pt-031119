@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     binding.pry
-    @user = User.new(username: params)
+    @user = User.new(username: params["username"], password: params["password"])
     erb :account
   end
 
